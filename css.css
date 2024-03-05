@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    max-width: 400px;
+    margin: 50px auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.cabecalho {
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+}
+
+.mensagem {
+    height: 200px; /* Reduzindo a altura para dar espaço para a entrada de mensagem */
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.chat-input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-top: 1px solid #ccc; /* Corrigindo o valor do border-top */
+    box-sizing: border-box;
+}
+
+.botao {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
