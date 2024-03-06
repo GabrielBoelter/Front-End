@@ -19,7 +19,7 @@ body {
 }
 
 .mensagem {
-    height: 200px; /* Reduzindo a altura para dar espaço para a entrada de mensagem */
+    height: 200px; 
     overflow-y: auto;
     padding: 10px;
 }
@@ -28,7 +28,7 @@ body {
     width: 100%;
     padding: 10px;
     border: none;
-    border-top: 1px solid #ccc; /* Corrigindo o valor do border-top */
+    border-top: 1px solid #ccc; 
     box-sizing: border-box;
 }
 
