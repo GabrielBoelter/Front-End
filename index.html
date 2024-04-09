@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat</title>
     <link rel="stylesheet" type="text/css" href="css.css" media="screen" />
-    <style>
-        /* Seu CSS aqui */
-    </style>
 </head>
 <body>
     <div class="main">
@@ -19,31 +16,26 @@
             <div class="textoatd">
                 Atendente diz:           
                 <div class="textoatd2">
-                    Blablablabla      
+                    Olá, bem-vindo ao atendimento!      
                 </div>  
             </div>
-            <div class="mensagem2" id="chat-messages">
-          </div>
-         
         </div>
-        <input type="text" class="chat-input" id="message-input" placeholder="Digite sua mensagem...">
-        <button class="botao" onclick="sendMessage()">Enviar</button>
+        <input type="text" class="chat-input" id="mensagem-input" placeholder="Digite sua mensagem...">
+        <button class="botao" onclick="enviar()">Enviar</button>
     </div>
 
     <script>
-        function sendMessage() {
-            var messageInput = document.getElementById("message-input");
-            var message = messageInput.value.trim();
+        function enviar() {
+            var input = document.getElementById("mensagem-input");
+            var mensagem = input.value.trim();
             
-            if (message !== "") {
-                var chatMessages = document.getElementById("chat-messages");
-                var newMessageDiv = document.createElement("div");
-                newMessageDiv.className = "textovc"; // Classe para mensagens do usuário
-                newMessageDiv.innerHTML = '<div class="textovc2">' + message + '</div>';
-                chatMessages.appendChild(newMessageDiv);
-
-                // Limpar campo de entrada
-                messageInput.value = "";
+            if (mensagem !== "") {
+                var chat = document.getElementById("chat-messages");
+                var novamensagem = document.createElement("div");
+                novamensagem.className = "textovc"; 
+                novamensagem.innerHTML = "Usuário diz:<div class='textovc2'>" + mensagem + "</div>";
+                chat.appendChild(novamensagem);            
+                input.value = "";
             }
         }
     </script>
