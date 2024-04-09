@@ -55,7 +55,7 @@ body {
     padding: 10px;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: end;
 }
 .chat-input {
     width: 100%;
