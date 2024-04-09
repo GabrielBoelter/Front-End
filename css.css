@@ -29,11 +29,14 @@ body {
     font-size: 14px;
     border-radius: 5px;
 }
+
 .textovc{
     padding: 10px;
     margin-top: 5px;
     text-align: end;
-
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
 }
 .textovc2{
     padding: 10px;
@@ -41,7 +44,7 @@ body {
     font-size: 14px;
     border-radius: 5px;
     border: 1px solid #000000;
-    align-items: flex-start;
+    align-self: flex-end;
 }
 .mensagem {
     overflow-y: auto;
