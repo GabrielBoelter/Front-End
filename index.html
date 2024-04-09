@@ -1,48 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Chat</title>
-        <link rel="stylesheet" type="text/css" href="css.css" media="screen" />
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" type="text/css" href="css.css" media="screen" />
+    <style>
+        /* Seu CSS aqui */
+    </style>
 </head>
 <body>
-        <div class="main">
-            <div class="cabecalho">
-                Chat de Atendimento
-            </div>
-            <div class="mensagem" id="chat-messages">
-                <div class="textoatd">
-                    Atendente diz:           
-                    <div class="textoatd2">
-                        Blablablabla      
-                    </div>  
-                </div>
-                
-                <div class="textoatd">
-                    Atendente diz:           
-                    <div class="textoatd2">
-                        Blablablabla      
-                    </div>  
+    <div class="main">
+        <div class="cabecalho">
+            Chat de Atendimento
+        </div>
+        <div class="mensagem" id="chat-messages">
+            <!-- Aqui serão exibidas as mensagens -->
+            <div class="textoatd">
+                Atendente diz:           
+                <div class="textoatd2">
+                    Blablablabla      
                 </div>  
             </div>
-            <div class="mensagem2"> 
-                <div class="textovc">
-                    Você diz:           
-                    <div class="textovc2">
-                        Blablablabla      
-                    </div>  
-                </div>
-                <div class="textovc">
-                    Você diz:           
-                    <div class="textovc2">
-                        Blablablabla      
-                    </div>  
-                </div>
-            </div>              
-            <input type="text" class="chat-input" id="message-input" placeholder="Digite sua mensagem...">
-            <button class="botao">Enviar</button>
-            </div>  
-        </body>
-     </html>
+            <div class="mensagem2" id="chat-messages">
+          </div>
+         
+        </div>
+        <input type="text" class="chat-input" id="message-input" placeholder="Digite sua mensagem...">
+        <button class="botao" onclick="sendMessage()">Enviar</button>
+    </div>
+
+    <script>
+        function sendMessage() {
+            var messageInput = document.getElementById("message-input");
+            var message = messageInput.value.trim();
+            
+            if (message !== "") {
+                var chatMessages = document.getElementById("chat-messages");
+                var newMessageDiv = document.createElement("div");
+                newMessageDiv.className = "textovc"; // Classe para mensagens do usuário
+                newMessageDiv.innerHTML = '<div class="textovc2">' + message + '</div>';
+                chatMessages.appendChild(newMessageDiv);
+
+                // Limpar campo de entrada
+                messageInput.value = "";
+            }
+        }
+    </script>
+</body>
+</html>
